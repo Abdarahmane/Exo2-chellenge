@@ -1,3 +1,5 @@
+
+
 # Gestion de Recettes
 
 ## Introduction
@@ -41,12 +43,15 @@ Pour cloner et installer ce projet, suivez ces étapes :
     ```
     ```bash
     npm install vue@latest
+    ```
+    ```bash 
+      npm install bootstrap
+    ```    
+     ```bash
+       npm install vue-router
+     ```
 
-    npm install bootstrap
-    
-    npm install vue-router
-
-    npm install  pinia
+        npm install  pinia
 
 ## Configuration
 
@@ -58,3 +63,5 @@ Pour lancer l'application en mode développement, utilisez la commande suivante 
 
 ```bash
 npm run dev
+
+
