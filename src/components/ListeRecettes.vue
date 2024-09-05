@@ -1,4 +1,3 @@
-<!-- src/components/ListeRecettes.vue -->
 <template>
   <div>
     <h2>Liste des Recettes</h2>
@@ -7,11 +6,12 @@
         <span>{{ recette.titre }}</span>
         <div>
           <button @click="modifier(recette.id)" class="btn btn-sm btn-warning mr-2">Modifier</button>
-          <button @click="supprimer(recette.id)" class="btn btn-sm btn-danger mr-2">Supprimer</button>
           <button @click="voirDetail(recette.id)" class="btn btn-sm btn-info">Détails</button>
+          <router-link :to="`/supprimer/${recette.id}`" class="btn btn-danger btn-sm">Supprimer</router-link> <!-- Lien pour la suppression -->
         </div>
       </li>
     </ul>
+    <p v-if="recettes.length === 0">Aucune recette disponible.</p>
   </div>
 </template>
 
@@ -26,10 +26,6 @@ const recettes = recetteStore.recettes;
 
 const modifier = (id) => {
   router.push(`/modifier/${id}`);
-};
-
-const supprimer = (id) => {
-  recetteStore.supprimerRecette(id);
 };
 
 const voirDetail = (id) => {

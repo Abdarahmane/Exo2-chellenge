@@ -7,7 +7,7 @@
       <p><strong>Ingrédients :</strong></p>
       <p>{{ recette.ingredients }}</p>
       <p><strong>Type :</strong> {{ recette.type }}</p>
-      <router-link to="/">Retour à la liste</router-link>
+      <router-link to="/"><button class="btn btn-secondary">Retour à la liste</button></router-link>
     </div>
   </div>
 </template>
